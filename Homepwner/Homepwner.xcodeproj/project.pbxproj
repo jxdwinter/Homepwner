@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831005ED1AC6769700B62D19 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 831005EC1AC6769700B62D19 /* BNRImageStore.m */; };
 		8379D9A41AC4DF790042823D /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8379D9A31AC4DF790042823D /* BNRItemsViewController.m */; };
 		8379D9A71AC4E4500042823D /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8379D9A61AC4E4500042823D /* BNRItem.m */; };
 		8379D9AA1AC4E7580042823D /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8379D9A91AC4E7580042823D /* BNRItemStore.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831005EB1AC6769700B62D19 /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		831005EC1AC6769700B62D19 /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 		8379D9A21AC4DF790042823D /* BNRItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemsViewController.h; sourceTree = "<group>"; };
 		8379D9A31AC4DF790042823D /* BNRItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemsViewController.m; sourceTree = "<group>"; };
 		8379D9A51AC4E4500042823D /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		8379D9AF1AC537800042823D /* BNRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDetailViewController.h; sourceTree = "<group>"; };
 		8379D9B01AC537800042823D /* BNRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDetailViewController.m; sourceTree = "<group>"; };
 		8379D9B11AC537800042823D /* BNRDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRDetailViewController.xib; sourceTree = "<group>"; };
+		83B2D0101AC67B840007794E /* Homepwner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Homepwner-Prefix.pch"; sourceTree = "<group>"; };
 		83D6918E1AC4DD60007991C9 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D691921AC4DD60007991C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D691931AC4DD60007991C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				8379D9A61AC4E4500042823D /* BNRItem.m */,
 				8379D9A81AC4E7580042823D /* BNRItemStore.h */,
 				8379D9A91AC4E7580042823D /* BNRItemStore.m */,
+				831005EB1AC6769700B62D19 /* BNRImageStore.h */,
+				831005EC1AC6769700B62D19 /* BNRImageStore.m */,
 				83D6919E1AC4DD60007991C9 /* Images.xcassets */,
 				8379D9AB1AC50B260042823D /* Launch.xib */,
 				83D691911AC4DD60007991C9 /* Supporting Files */,
@@ -111,6 +117,7 @@
 		83D691911AC4DD60007991C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83B2D0101AC67B840007794E /* Homepwner-Prefix.pch */,
 				83D691921AC4DD60007991C9 /* Info.plist */,
 				83D691931AC4DD60007991C9 /* main.m */,
 			);
@@ -236,6 +243,7 @@
 			files = (
 				8379D9B21AC537800042823D /* BNRDetailViewController.m in Sources */,
 				8379D9AA1AC4E7580042823D /* BNRItemStore.m in Sources */,
+				831005ED1AC6769700B62D19 /* BNRImageStore.m in Sources */,
 				8379D9A41AC4DF790042823D /* BNRItemsViewController.m in Sources */,
 				8379D9A71AC4E4500042823D /* BNRItem.m in Sources */,
 				83D691971AC4DD60007991C9 /* AppDelegate.m in Sources */,
@@ -342,6 +350,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Homepwner/Homepwner-Prefix.pch";
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +363,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Homepwner/Homepwner-Prefix.pch";
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
