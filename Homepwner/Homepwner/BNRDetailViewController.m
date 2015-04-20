@@ -93,6 +93,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UIImageView *iv = [[UIImageView alloc] initWithImage:nil];
+    NSLog(@"%d",UIViewContentModeScaleAspectFit);
+    iv.contentMode = UIViewContentModeScaleAspectFit;
+    iv.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:iv];
+    self.imageView = iv;
+    
+    [self.imageView setContentHuggingPriority:200 forAxis:UILayoutConstraintAxisVertical];
+    [self.imageView setContentCompressionResistancePriority:700 forAxis:UILayoutConstraintAxisHorizontal];
+    
+    NSDictionary *nameMap = @{@"imageView":self.imageView,@"dateLabel":self.dateLabel,@"toolbar":self.toolbar};
+    
+    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-8-[imageView]-8-|"
+                                                                             options:0
+                                                                             metrics:nil
+                                                                               views:nameMap];
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[dateLabel]-[imageView]-[toolbar]"
+                                                                           options:0
+                                                                           metrics:nil
+                                                                             views:nameMap];
+    
+    [self.view addConstraints:horizontalConstraints];
+    [self.view addConstraints:verticalConstraints];
+    
 }
 
 - (void)didReceiveMemoryWarning {
